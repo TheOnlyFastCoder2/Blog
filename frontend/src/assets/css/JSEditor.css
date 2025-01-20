@@ -1,0 +1,207 @@
+:root {
+  --main: #09090B;
+  --primary: #363739b8;
+  --selected: rgba(255, 255, 255, 0.87);
+  --border: #212327;
+  --BGBorder: #141417;
+  --text: rgba(255, 255, 255, 0.801);
+  --textHeader: rgba(255, 255, 255, 0.801);
+  --textBody: rgb(161, 161, 170);
+}
+
+
+
+#editorjs {
+
+  border:none;
+  
+  h1, h2, h3, h4, h5, h6, h7 {
+    font-weight: 800;
+  }
+  h1 {
+      font-size: clamp(2rem, 4vw + 1rem, 4rem);
+      line-height: clamp(2.5rem, 5vw + 1.5rem, 5rem);
+  }
+
+  h2 {
+      font-size: clamp(1.75rem, 3.5vw + 1rem, 3.5rem);
+      line-height: clamp(2.25rem, 4.5vw + 1.5rem, 4.5rem);
+  }
+
+  h3 {
+      font-size: clamp(1.5rem, 3vw + 0.75rem, 3rem);
+      line-height: clamp(2rem, 4vw + 1rem, 4rem);
+  }
+
+  h4 {
+      font-size: clamp(1.25rem, 2.5vw + 0.5rem, 2.5rem);
+      line-height: clamp(1.75rem, 3.5vw + 1rem, 3rem);
+  }
+
+  h5 {
+      font-size: clamp(1rem, 2vw + 0.25rem, 2rem);
+      line-height: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
+  }
+
+  h6 {
+      font-size: clamp(0.875rem, 1.75vw + 0.25rem, 1.75rem);
+      line-height: clamp(1.25rem, 2.5vw + 0.5rem, 2rem);
+  }
+
+  h7 {
+      font-size: clamp(0.75rem, 1.5vw + 0.25rem, 1.5rem);
+      line-height: clamp(1rem, 2vw + 0.5rem, 1.5rem);
+  }
+
+  li {
+    font-size: clamp(0.67rem, 1.33vw + 0.17rem, 1.33rem);
+    line-height: clamp(1rem, 2vw + 0.33rem, 1.67rem);
+  }
+
+
+  p,a, .ce-paragraph {
+    font-size: clamp(0.5rem, 1vw + 0.25rem, 1rem); 
+    line-height: clamp(1rem, 2vw + 0.5rem, 1.5rem);
+    text-decoration: none; 
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.2)
+  }
+
+  blockquote {
+    background-color: #f9f9f910; 
+    padding: 1rem; 
+    border-left: 4px solid #cccccc8a; 
+    margin: 1rem 0; 
+    border-radius: 4px; 
+    font-style: italic; 
+  }
+
+  code {
+    font-size: clamp(0.5rem, 1vw + 0.25rem, 1rem); 
+    line-height: clamp(0.75rem, 1.5vw + 0.25rem, 1rem); 
+    background-color: #f5f5f5; 
+    padding: 0.2rem 0.4rem; 
+    border-radius: 4px; 
+  }
+}
+
+
+#editorjs.dark.read-only {
+  .ce-block__content {
+    max-width: unset;
+  }
+}
+#editorjs.dark .prism-code-tool-read-only {
+  background:rgba(75, 85, 104, 0.4);
+}
+
+#editorjs.dark:not(#editorjs.dark.read-only) .ce-block__content {
+  box-shadow: 0 1px rgba(53, 56, 61, 0.4);
+  &:hover {
+    box-shadow: 0 1px rgba(33, 35, 39, 1);
+  }
+}
+
+#editorjs.dark ,
+#editorjs.dark .ce-popover__container {
+  background-color: var(--main);
+}
+
+#editorjs.dark .ce-toolbar__plus,
+#editorjs.dark .ce-toolbar__settings-btn,
+#editorjs.dark .ce-popover-item__title,
+#editorjs.dark .ce-popover-item__icon {
+  color: var(--text);
+}
+
+#editorjs.dark .cdx-search-field.ce-popover__search,
+#editorjs.dark .ce-popover--opened>.ce-popover__container {
+  background-color: var(--BGBorder);
+  border-color: var(--border);
+}
+
+#editorjs.dark .cdx-search-field__input {
+  color: var(--text);
+}
+
+#editorjs.dark .cdx-block,
+#editorjs.dark .ce-popover-item-html svg {
+  color: var(--textBody);
+}
+#editorjs.dark .ce-block {
+  color: var(--textHeader);
+}
+
+#editorjs.dark .ce-inline-toolbar,
+#editorjs.dark .ce-conversion-tool__icon,
+#editorjs.dark .ce-popover-item__icon,
+#editorjs.dark .tc-popover__item-icon {
+  color: var(--text);
+  border-color: var(--border);
+  svg {color: var(--text);}
+ 
+}
+
+#editorjs.dark .ce-popover__items > *  {
+  &:hover {
+    svg {
+      color: var(--main);
+    }
+  }
+}
+
+#editorjs.dark .ce-popover,
+#editorjs.dark .ce-conversion-toolbar,
+#editorjs.dark .ce-inline-toolbar,
+#editorjs.dark .tc-popover {
+  background-color: var(--primary);
+  border-color: var(--border);
+  box-shadow: 0 3px 15px -3px var(--border);
+}
+
+#editorjs.dark .ce-inline-tool:hover,
+#editorjs.dark .ce-inline-toolbar__dropdown:hover,
+#editorjs.dark .ce-toolbar__plus:hover,
+#editorjs.dark .ce-toolbar__settings-btn:hover,
+#editorjs.dark .ce-conversion-tool:hover,
+#editorjs.dark .ce-popover-item:hover {
+  background-color: var(--selected);
+  .ce-popover-item__title {
+    color: var(--main);
+  }
+}
+
+#editorjs.dark .ce-toolbar__plus:hover,
+#editorjs.dark .ce-toolbar__settings-btn:hover {
+  svg {
+    color: var(--main);
+  }
+}
+
+#editorjs.dark *::selection,
+#editorjs.dark .ce-block.ce-block--selected .ce-block__content {
+  background-color: var(--selected);
+  color: var(--main);
+}
+
+#editorjs.dark .ce-popover__items {
+  scrollbar-color: var(--border) var(--main);
+}
+/* table class wrapper */
+#editorjs.dark .tc-wrap,
+#editorjs.dark .tc-wrap * {
+  --color-border: var(--border);
+  --color-text-secondary: var(--text);
+  --color-background: var(--selected);
+  --toggler-dots-color: var(--selected);
+  --toggler-dots-color-hovered: var(--text);
+}
+
+@media (max-width: 650px) {
+  #editorjs.dark .ce-toolbar__settings-btn,
+  #editorjs.dark .ce-toolbar__plus {
+    background-color: var(--primary);
+    border-color: var(--border);
+    box-shadow: 0 3px 15px -3px var(--border);
+  }
+}

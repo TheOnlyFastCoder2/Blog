@@ -1,0 +1,69 @@
+@import "https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/blue.css";
+@import "https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/green.css";
+@import "https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/yellow.css";
+@import "https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/red.css";
+
+
+:root {
+  --white:var(--basePageBg);
+  --scrollSize: 4px;
+  --scrollBg: #3f464f;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  &.hiddenScrollBar {
+    &::-webkit-scrollbar {
+      width: 0; 
+      background: transparent; 
+    }
+    &::-webkit-scrollbar-thumb {
+      background: transparent; 
+      border-radius: none; 
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent; 
+    }
+  }
+  &::-webkit-scrollbar {
+    width: var(--scrollSize);
+    height: var(--scrollSize);
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background:var(--scrollBg);
+    cursor: grab;
+  }
+
+  &::-moz-scrollbar {
+    width: var(--scrollSize);
+    
+  }
+
+  &::-moz-scrollbar-thumb {
+    background:var(--scrollBg);
+    cursor: grab;
+  }
+
+  
+  &::-ms-scrollbar {
+      width: var(--scrollSize);
+      
+      height: var(--scrollSize);
+  }
+
+  &::-ms-scrollbar-thumb {
+      background: var(--scrollBg);
+      cursor: grab;
+  }
+}
+
+
+#app {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}

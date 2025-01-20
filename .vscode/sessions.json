@@ -1,0 +1,46 @@
+{
+  "$schema": "https://cdn.statically.io/gh/nguyenngoclongdev/cdn/main/schema/v10/terminal-keeper.json",
+  "theme": "tribe",
+  "active": "saved-session",
+  "activateOnStartup": true,
+  "keepExistingTerminals": false,
+  "sessions": {
+    "default": [
+      {
+        "name": "hello",
+        "autoExecuteCommands": true,
+        "icon": "person",
+        "color": "terminal.ansiGreen",
+        "commands": [
+          "echo hello"
+        ]
+      }
+    ],
+    "saved-session": [
+      {
+        "name": "frontend:dev",
+        "commands": [
+          "cd frontend && bun dev"
+        ]
+      },
+      {
+        "name": "frontend:chakra",
+        "commands": [
+          "cd frontend"
+        ]
+      },
+      {
+        "name": "backend:dev",
+        "commands": [
+          "cd backend && bun dev"
+        ]
+      },
+      {
+        "name": "prisma:studio",
+        "commands": [
+          "cd backend && npx prisma studio"
+        ]
+      }
+    ]
+  }
+}

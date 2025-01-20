@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": " bun --watch ./src/index.ts",
+    "migrate": "npx prisma migrate dev --name init && npx prisma db push",
+    "studio": " npx prisma studio",
+    "build": "bun build --compile --minify-whitespace --minify-syntax --target bun --outfile server ./src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prisma": "^6.1.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.2.0",
+    "@elysiajs/jwt": "^1.2.0",
+    "@elysiajs/websocket": "^0.2.8",
+    "@prisma/client": "^6.1.0",
+    "elysia": "^1.2.7"
+  }
+}
