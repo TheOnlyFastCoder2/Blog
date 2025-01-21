@@ -9,7 +9,7 @@
 - [Изображения](#изображения)
 
 # Параметры запуска
-### backend работает на BunJS не на NodeJS!!!
+### Backend работает на BunJS не на NodeJS!!!
 ```
 > Frontend: cd frontend && npm run dev
 > Backend: cd backend && npm run dev
